@@ -2,15 +2,44 @@
 
 ## Project Name
 
-The name of your project.
+ATX Camping Ban Offenses
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+This application will allow people to see & filter, the ATX proposition B Camping Ban Offenses. And hopefullyl, I can visualize the data in a meaningful way. i.e, the site will update with a pie chart on the number of offenses by men vs woman, or by different races, etc.
 
 ## API and Data Sample
 
-Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need
+https://data.austintexas.gov/Public-Safety/Proposition-B-Camping-Ban-Offenses/qc59-phn7
+
+    {
+        "court_agency": "DACC",
+        "offense_case_type": "CO",
+        "offense_date": "2021-06-15T00:00:00.000",
+        "case_filed_date": "2021-06-24T00:00:00.000",
+        "charge_code": "CC62611",
+        "charge_description": "Obstruction in the DACC Area Prohibited",
+        "offense_street_name": "200 Block East 6th Street",
+        "case_closed": false,
+        "agency": "APD",
+        "officer_code": "5193",
+        "race": "Black",
+        "defendant_gender": "Male"
+    },
+    {
+        "court_agency": "DACC",
+        "offense_case_type": "CO",
+        "offense_date": "2021-06-15T00:00:00.000",
+        "case_filed_date": "2021-06-25T00:00:00.000",
+        "charge_code": "CC62611",
+        "charge_description": "Obstruction in the DACC Area Prohibited",
+        "offense_street_name": "500 Block Trinity Street",
+        "case_closed": false,
+        "agency": "APD",
+        "officer_code": "5193",
+        "race": "Black",
+        "defendant_gender": "Male"
+    }
 
 ## Wireframes
 
