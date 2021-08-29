@@ -59,9 +59,6 @@ Upload images of your wireframes to an image hosting site or add them to an asse
 * 'most active date' function that displays the date with the most incidents.
 * potentially more useful data such as D/W/M averages, graphs plotting # of incidents along the date to see if cases are rising or lowering, etc.
 
-- Add second API
-- Use local storage to save user favorites
-
 ## Project Schedule
 
 This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
