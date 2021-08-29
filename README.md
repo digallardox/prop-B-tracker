@@ -47,17 +47,17 @@ Upload images of your wireframes to an image hosting site or add them to an asse
 
 ### MVP/PostMVP
 
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
+#### MVP
+* Render all incident data into cards that displays information.
+* allow users to filter by data sets i.e gender, race, etc.
+* a learn more page that gives more information about the Prop-B camping ban Offense
 
-#### MVP 
-*These are examples only. Replace with your own MVP features.*
-
-- Find and use external api 
-- Render data on page 
-- Allow user to choose favorites 
 
 #### PostMVP  
-*These are examples only. Replace with your own Post-MVP features.*
+* A counter for # of total cases and # of cases by filtered result.
+* graphics that visually tell a story i.e a pie chart that shows the percentage of incident by male vs. female.
+* 'most active date' function that displays the date with the most incidents.
+* potentially more useful data such as D/W/M averages, graphs plotting # of incidents along the date to see if cases are rising or lowering, etc.
 
 - Add second API
 - Use local storage to save user favorites
