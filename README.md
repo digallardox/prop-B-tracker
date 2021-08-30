@@ -89,9 +89,14 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Setup JS data handling | H | 4.5hrs|  | |
+| Filter by functioin | H | 2.5hrs|  |  |
+| CSS Styling | M | 3hrs|  |  |
+| Results Counter | M | 1hrs|  |  |
+| Learn More Page | M |1.5hrs|  |  |
+| Basic HTML structure | M | 2hrs|  |  |
+| Basic Troubleshooting | H | 3hrs|  |  |
+| Total | H | 6hrs|  | |
 
 ## Code Snippet
 
