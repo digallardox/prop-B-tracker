@@ -2,12 +2,14 @@ const API = 'https://data.austintexas.gov/resource/qc59-phn7.json';
 const dataContainer = document.querySelector('.data-container');
 const selectGender = document.querySelector('#selectGender');
 const selectRace = document.querySelector('#selectRace');
+const counter = document.querySelector('#counter');
 
 ////////////////////////////////////////////////////////////////////////////////////
 async function retrieveData() {
 	try {
 		const res = await axios.get(API);
 		const dataObj = res.data;
+		resultsCounter(dataObj.length);
 		for (data of dataObj) {
 			let dataSets = {
 				agency: data.agency,
@@ -30,6 +32,10 @@ async function retrieveData() {
 	}
 }
 retrieveData();
+
+function resultsCounter(results) {
+	counter.append(results);
+}
 
 function renderArrays(x) {
 	let component = `
@@ -60,6 +66,7 @@ selectGender.addEventListener('change', genderOption);
 selectRace.addEventListener('change', raceOption);
 
 async function genderOption(event) {
+	let genderCounter = 0;
 	try {
 		const res = await axios.get(API);
 		const dataObj = res.data;
@@ -82,14 +89,17 @@ async function genderOption(event) {
 			};
 			if (dataSets.defendant_gender === event.target.value) {
 				renderArrays(dataSets);
+				genderCounter += 1;
 			}
 		}
+		resultsCounter(genderCounter);
 	} catch (error) {
 		console.log(error);
 	}
 }
 
 async function raceOption(event) {
+	let raceCounter = 0;
 	try {
 		const res = await axios.get(API);
 		const dataObj = res.data;
@@ -112,8 +122,10 @@ async function raceOption(event) {
 			};
 			if (dataSets.race === event.target.value) {
 				renderArrays(dataSets);
+				raceCounter += 1;
 			}
 		}
+		resultsCounter(raceCounter);
 	} catch (error) {
 		console.log(error);
 	}
@@ -121,6 +133,7 @@ async function raceOption(event) {
 
 function removeOldContent() {
 	dataContainer.innerHTML = '';
+	counter.innerHTML = '';
 }
 
 ////////////////////////////////////////////////// OBJECT KEYS //////////////////////////////////////////////////////////
