@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="script.js"></script>
+    <title>Prop-B Camping Ban</title>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <h1 id="home">Prop-B Camping Ban<br><span>Incident Tracker</span></h1>
+            <p id="my-articles">Learn More</p>
+        </nav>
+        <div class="img-container"></div>
+    </header>
+    <div id="Filter">
+    <p>Filter By</p>
+    <select id="selectGender">
+        <option selected disabled>Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+    <select>
+        <option selected disabled>Race</option>
+        <option value="White">White</option>
+        <option value="Black">Black</option>
+        <option value="Hispanic">Hispanic</option>
+    </select>
+    </div>
+
+    <div class="data-container"></div>
+</body>
+</html>
