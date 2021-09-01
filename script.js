@@ -1,13 +1,15 @@
 const API = 'https://data.austintexas.gov/resource/qc59-phn7.json';
 const dataContainer = document.querySelector('.data-container');
 const selectGender = document.querySelector('#selectGender');
+const selectRace = document.querySelector('#selectRace');
 
+////////////////////////////////////////////////////////////////////////////////////
 async function retrieveData() {
 	try {
 		const res = await axios.get(API);
 		const dataObj = res.data;
-		   for (data of dataObj) {
-        let dataSets = {
+		for (data of dataObj) {
+			let dataSets = {
 				agency: data.agency,
 				case_closed: data.case_closed,
 				case_filed_date: data.case_filed_date,
@@ -20,17 +22,17 @@ async function retrieveData() {
 				offense_street_name: data.offense_street_name,
 				officer_code: data.officer_code,
 				race: data.race,
-				};
-		renderArrays(dataSets);
-			}
-
+			};
+			renderArrays(dataSets);
+		}
 	} catch (error) {
 		console.log(error);
 	}
 }
+retrieveData();
 
 function renderArrays(x) {
-    let component = `
+	let component = `
 	<div class="card">
             <div class="card-body">
                 <p class="headline"><b>Agency:</b> ${x.agency}</p>
@@ -49,11 +51,77 @@ function renderArrays(x) {
             </div>
 		</div>
         `;
-		dataContainer.insertAdjacentHTML('beforeend', component);
+	dataContainer.insertAdjacentHTML('beforeend', component);
 }
 
-retrieveData();
+//////////////////////////////////////////////////////////////////////////////////////
 
+selectGender.addEventListener('change', genderOption);
+selectRace.addEventListener('change', raceOption);
+
+async function genderOption(event) {
+	try {
+		const res = await axios.get(API);
+		const dataObj = res.data;
+		removeOldContent();
+
+		for (data of dataObj) {
+			let dataSets = {
+				agency: data.agency,
+				case_closed: data.case_closed,
+				case_filed_date: data.case_filed_date,
+				charge_code: data.charge_code,
+				charge_description: data.charge_description,
+				court_agency: data.court_agency,
+				defendant_gender: data.defendant_gender,
+				offense_case_type: data.offense_case_type,
+				offense_date: data.offense_date,
+				offense_street_name: data.offense_street_name,
+				officer_code: data.officer_code,
+				race: data.race,
+			};
+			if (dataSets.defendant_gender === event.target.value) {
+				renderArrays(dataSets);
+			}
+		}
+	} catch (error) {
+		console.log(error);
+	}
+}
+
+async function raceOption(event) {
+	try {
+		const res = await axios.get(API);
+		const dataObj = res.data;
+		removeOldContent();
+
+		for (data of dataObj) {
+			let dataSets = {
+				agency: data.agency,
+				case_closed: data.case_closed,
+				case_filed_date: data.case_filed_date,
+				charge_code: data.charge_code,
+				charge_description: data.charge_description,
+				court_agency: data.court_agency,
+				defendant_gender: data.defendant_gender,
+				offense_case_type: data.offense_case_type,
+				offense_date: data.offense_date,
+				offense_street_name: data.offense_street_name,
+				officer_code: data.officer_code,
+				race: data.race,
+			};
+			if (dataSets.race === event.target.value) {
+				renderArrays(dataSets);
+			}
+		}
+	} catch (error) {
+		console.log(error);
+	}
+}
+
+function removeOldContent() {
+	dataContainer.innerHTML = '';
+}
 
 ////////////////////////////////////////////////// OBJECT KEYS //////////////////////////////////////////////////////////
 // agency: 'APD';
