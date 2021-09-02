@@ -3,6 +3,11 @@ const dataContainer = document.querySelector('.data-container');
 const selectGender = document.querySelector('#selectGender');
 const selectRace = document.querySelector('#selectRace');
 const counter = document.querySelector('#counter');
+const reset = document.querySelector('#reset');
+
+selectGender.addEventListener('change', genderOption);
+selectRace.addEventListener('change', raceOption);
+reset.addEventListener('click', resetChoices);
 
 ////////////////////////////////////////////////////////////////////////////////////
 async function retrieveData() {
@@ -62,9 +67,6 @@ function renderArrays(x) {
 
 //////////////////////////////////////////////////////////////////////////////////////
 
-selectGender.addEventListener('change', genderOption);
-selectRace.addEventListener('change', raceOption);
-
 async function genderOption(event) {
 	let genderCounter = 0;
 	try {
@@ -92,6 +94,7 @@ async function genderOption(event) {
 				genderCounter += 1;
 			}
 		}
+		selectRace.selectedIndex = 0;
 		resultsCounter(genderCounter);
 	} catch (error) {
 		console.log(error);
@@ -125,6 +128,7 @@ async function raceOption(event) {
 				raceCounter += 1;
 			}
 		}
+		selectGender.selectedIndex = 0;
 		resultsCounter(raceCounter);
 	} catch (error) {
 		console.log(error);
@@ -135,6 +139,14 @@ function removeOldContent() {
 	dataContainer.innerHTML = '';
 	counter.innerHTML = '';
 }
+
+function resetChoices() {
+	selectGender.selectedIndex = 0;
+	selectRace.selectedIndex = 0;
+	removeOldContent();
+	retrieveData();
+}
+
 
 ////////////////////////////////////////////////// OBJECT KEYS //////////////////////////////////////////////////////////
 // agency: 'APD';

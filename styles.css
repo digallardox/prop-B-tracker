@@ -9,7 +9,9 @@ html {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 20px 40px;
+	margin-left: auto;
+	margin-right: auto;
+	margin: 20px 65px;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -17,15 +19,19 @@ html {
 
 a /*site title & 'learn more' link*/ {
 	text-decoration: none;
-	color: #0066ff;
+	color: black;
 }
 
 span /*incident tracker text*/ {
-	font-weight: 200;
+	font-weight: 300;
 }
 
 .img-container {
-	height: 70vh;
+	height: 60vh;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
 	background-image: url(/Images/955ba3e8-05fc-4c27-b8ad-e80d895f480e-amr_TXAUS-050321-elx_aus_homeless_3.jpeg);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -34,10 +40,44 @@ span /*incident tracker text*/ {
 	padding-top: 80px;
 }
 
+#siteTitle:hover {
+	color: black;
+	transition: transform .2s;
+}
+
+#siteTitle:hover {
+	color: #0645AD;
+}
+
+#learnMore {
+	color: black
+	transition: transform .2s;
+}
+
+#learnMore:hover {
+	color: #0645AD;
+}
+
 #filter {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+select {
+	margin: 0 5px;
+	height: 25px;
+	width: 80px;
+}
+
+#reset {
+	background-color: black;
+	color: white;
+	border: none;
+	margin: 0 5px;
+	border-radius: 2px;
+	height: 25px;
+	width: 50px;
 }
 
 .counter {
@@ -60,7 +100,7 @@ span /*incident tracker text*/ {
 	margin: 25px;
 	padding: 20px;
 	border-radius: 10px;
-	box-shadow: 0px 4px 15px -1px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 4px 15px -1px rgba(0, 0, 0, 0.15);
 	width: 90%;
 	max-width: 375px;
 }
@@ -71,3 +111,15 @@ span /*incident tracker text*/ {
 	justify-content: space-between;
 	width: 90%;
 }
+
+#aboutText {
+	margin: 20px 65px;
+}
+
+
+@media only screen and (max-width: 768px) {
+	.nav {
+		margin: 10px 20px;
+	}
+
+	}
