@@ -4,10 +4,12 @@ const selectGender = document.querySelector('#selectGender');
 const selectRace = document.querySelector('#selectRace');
 const counter = document.querySelector('#counter');
 const reset = document.querySelector('#reset');
+const btn = document.querySelector('#button');
 
 selectGender.addEventListener('change', genderOption);
 selectRace.addEventListener('change', raceOption);
 reset.addEventListener('click', resetChoices);
+
 
 ////////////////////////////////////////////////////////////////////////////////////
 async function retrieveData() {
