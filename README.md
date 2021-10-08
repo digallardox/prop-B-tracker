@@ -4,7 +4,7 @@
 
 ATX Camping Ban Offenses
 
-https://digallardox.github.io/project-1/
+https://digallardox.github.io/ATX-Camping-Ban-Tracker/
 
 ## Project Description
 
