@@ -1,14 +1,8 @@
-# Project Overview
-
-## Project Name & Link
-
-ATX Camping Ban Offenses
-
-https://digallardox.github.io/ATX-Camping-Ban-Tracker/
+### ATX Prop. B Camping Ban Tracker
+Live site: [digallardox.github.io/prop-B-tracker](digallardox.github.io/prop-B-tracker)
 
 ## Project Description
-
-This application will allow people to see & filter, the ATX proposition B Camping Ban Offenses. And hopefullyl, I can visualize the data in a meaningful way. i.e, the site will update with a pie chart on the number of offenses by men vs woman, or by different races, etc.
+Prop B. is a law passed in Austin that bans public camping. This website pulls data from the Austin Gov website to track the number of police reports for this issue. It renders all the data fields and allows people to filter by specific criteria. When I first made the app, there were under 20 data nodes and now there are over 400. 
 
 ## API and Data Sample
 
@@ -83,32 +77,3 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 ![](https://res.cloudinary.com/dhmx2wuik/image/upload/v1630329443/PXL_20210830_130338656_ztnkbj.jpg)
 
-## Timeframes
-
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
-
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
-
-| Component | Priority | Estimated Time | Time Invested | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
-| Setup JS data handling | H | 4.5hrs|  | |
-| Filter by functioin | H | 2.5hrs|  |  |
-| CSS Styling | M | 3hrs|  |  |
-| Results Counter | M | 1hrs|  |  |
-| Learn More Page | M |1.5hrs|  |  |
-| Basic HTML structure | M | 2hrs|  |  |
-| Basic Troubleshooting | H | 3hrs|  |  |
-| Total | H | 6hrs|  | |
-
-## Code Snippet
-
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
-
-```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
-```
-
-## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
